@@ -1,0 +1,95 @@
+# Deep Learning Hands-On Repo
+
+This repository is a hands-on project focused on deep learning for tabular data, with examples covering:
+
+- tabular data preprocessing
+- missing value handling
+- categorical embedding strategies
+- point-estimation regression/classification
+- sequence-style modeling concepts for tabular time series data
+- PyTorch training loops and model evaluation
+
+The work is inspired by the `deepL.ipynb` notebook, which explores how to build a small deep learning pipeline for tabular data using PyTorch and scikit-learn.
+
+## Project goals
+
+- Learn how to prepare tabular data for deep learning
+- Compare different preprocessing workflows for numeric and categorical features
+- Understand how neural networks can handle tabular data without requiring a full auto-ML stack
+- Practice building custom training loops for model fitting and evaluation
+- Extend these patterns toward sequence prediction and time-aware tabular modeling
+
+## Repository structure
+
+```text
+.
+├── README.md
+├── .gitignore
+├── requirements.txt
+├── notebooks/
+│   └── deepL.ipynb
+├── src/
+│   ├── __init__.py
+│   └── tabular_models.py
+└── data/
+    └── .gitkeep
+```
+
+## Included examples
+
+### 1. Tabular data preprocessing
+- loading tabular data
+- train/test split
+- missing value imputation
+- feature scaling for numeric variables
+- categorical encoding and embedding setup
+
+### 2. Model building
+- feed-forward network for tabular regression/classification
+- embedding layers for categorical features
+- concatenation of numeric + embedded categorical features
+
+### 3. Training loop
+- `DataLoader` usage
+- optimizer and loss definition
+- forward pass, backward pass, parameter updates
+- evaluation loop
+
+### 4. Extension ideas
+- sequence prediction using time-indexed tabular windows
+- tabular transformer-style encoders
+- recurrent / temporal models for tabular sequences
+- model checkpointing and experiment tracking
+
+## Recommended environment
+
+This project is designed for Python 3.10+.
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Example workflow
+
+```bash
+jupyter notebook notebooks/deepL.ipynb
+```
+
+## Quick notes
+
+- Keep Kaggle credentials in environment variables, not in version-controlled code.
+- For tabular data, numerical feature scaling and categorical handling are often the biggest contributors to model quality.
+- For sequence-oriented tasks, windowing and temporal ordering usually matter more than raw feature counts.
+
+## Future roadmap
+
+- add more tabular datasets and benchmarking notebooks
+- include classical baselines (XGBoost, LightGBM, CatBoost)
+- add sequence prediction examples for temporal tabular data
+- build reusable training utilities and experiment configs
+
+## License
+
+This project is provided for educational and hands-on learning purposes.
